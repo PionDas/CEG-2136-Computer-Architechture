@@ -1,0 +1,50 @@
+|mod60new
+BQ3 <= lab2PartBtest2:inst1.BQ3
+CCLK => lab2PartBtest2:inst1.CCLK
+CCLK => lab2:inst.CCLK
+Count => lab2PartBtest2:inst1.Count
+Reset => lab2PartBtest2:inst1.RESET
+Reset => lab2:inst.RESET
+BQ2 <= lab2PartBtest2:inst1.BQ2
+BQ1 <= lab2PartBtest2:inst1.BQ1
+BQ0 <= lab2PartBtest2:inst1.BQ0
+Q2 <= lab2:inst.Q2
+Q1 <= lab2:inst.Q1
+Q0 <= lab2:inst.Q0
+
+
+|mod60new|lab2PartBtest2:inst1
+BQ3 <= JK2.DB_MAX_OUTPUT_PORT_TYPE
+RESET => inst10.IN0
+RESET => inst9.IN0
+RESET => inst7.IN0
+RESET => inst13.IN0
+Count => JK0~1.IN0
+Count => JK0~0.IN1
+Count => inst8.IN0
+Count => inst.IN1
+Count => inst11.IN1
+CCLK => JK0.CLK
+CCLK => JK4.CLK
+CCLK => JK3.CLK
+CCLK => JK2.CLK
+BQ2 <= JK3.DB_MAX_OUTPUT_PORT_TYPE
+BQ1 <= JK4.DB_MAX_OUTPUT_PORT_TYPE
+BQ0 <= JK0.DB_MAX_OUTPUT_PORT_TYPE
+BRO <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mod60new|lab2:inst
+Q1 <= JK1.DB_MAX_OUTPUT_PORT_TYPE
+RESET => inst13.IN0
+RESET => inst11.IN0
+RESET => inst12.IN0
+Count => inst2.IN0
+CCLK => JK0.CLK
+CCLK => JK2.CLK
+CCLK => JK1.CLK
+RO <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q0 <= JK0.DB_MAX_OUTPUT_PORT_TYPE
+Q2 <= JK2.DB_MAX_OUTPUT_PORT_TYPE
+
+
